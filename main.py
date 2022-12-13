@@ -1,14 +1,22 @@
 from tkinter import *
 
 window = Tk()
-window.minsize(640, 480)
-window.maxsize(640, 480)
+window.minsize(522, 565)
+window.maxsize(522, 565)
+window.geometry("522x565")
 
-label1 = Frame(window, width = 640, height = 400, bd = 3, bg = "black")
-label2 = Label(window, text = "JAkiś text", font = ("Arial", 24), bd = 3, bg = "green")
+photo = PhotoImage(file="samolot.png")
 
-label1.pack()
-label2.pack()
+
+mainFrame = Label(window,
+                  text="Samolot",
+                  font = ("Arial", 28),
+                  bd=10,
+                  bg="black",
+                  fg="white",
+                  image=photo,
+                  compound="top")
+mainFrame.pack()
 
 window.mainloop()
 
