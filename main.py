@@ -1,14 +1,14 @@
 from tkinter import *
-import threading
-import time
-
-def okno():
-    for i in range(50):
-        time.sleep(0.1)
-        print(window.winfo_geometry())
 
 window = Tk()
-window.geometry("429x557")
-threading.Thread(target=okno).start()
+window.minsize(640, 480)
+window.maxsize(640, 480)
+
+label1 = Frame(window, width = 640, height = 400, bd = 3, bg = "black")
+label2 = Label(window, text = "JAkiś text", font = ("Arial", 24), bd = 3, bg = "green")
+
+label1.pack()
+label2.pack()
+
 window.mainloop()
 
